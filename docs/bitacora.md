@@ -31,7 +31,7 @@
 | **Texto Secundario** | `muted` | `#756D74` | Subtítulos, etiquetas descriptivas y textos de apoyo con contraste > 4.6:1 sobre fondo claro. |
 
 ### Escala Tipográfica (`src/theme/colors.ts`)
-* **Títulos (`heading` — `Lora_400Regular`):** Tipografía serif humanista que aporta calidez editorial y cercanía emocional en encabezados de pantalla (`26–32 pt`).
+* **Títulos (`heading` — `Lora_400Regular`):** Tipografía que aporta calidez editorial y cercanía emocional en encabezados de pantalla (`26–32 pt`).
 * **Cuerpo y Controles (`body` / `medium` / `semi` — `Inter_400Regular`, `Inter_500Medium`, `Inter_600SemiBold`):** Tipografía sans-serif de alta legibilidad en pantallas móviles (`16 pt` en cuerpo y campos de texto, `13–14 pt` en etiquetas y chips).
 
 ---
