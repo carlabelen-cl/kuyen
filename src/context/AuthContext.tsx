@@ -1,9 +1,10 @@
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react'; // create context: Crea un contexto compartido entre componente, useContext: Permite acceder al contexto desde cualquier componente, useEffect: Permite ejecutar código cuando el componente se monta o actualiza, useState: Permite manejar el estado del componente, ReactNode: Tipo de dato que representa cualquier elemento de React (componentes, texto, etc.)
 import {
   Usuaria, registrarUsuaria, iniciarSesion, actualizarUsuaria, obtenerSesion, cerrarSesion,
-} from '../database/mockDb';
-
-type AuthValue = {
+} from '../database/mockDb'; // importa las funciones y tipos necesarios para manejar la autenticación de usuarias desde la base de datos simulada (mockDb)
+// un useState guarda información c: 
+// create context y use context permiten compartir información entre componentes sin tener que pasarla como props, es como un "almacén" de información que todos los componentes pueden usar
+type AuthValue = { // que información estará disponible mediante el contexto 
   usuaria: Usuaria | null;
   cargando: boolean;
   registrar: (datos: Pick<Usuaria, 'nombre' | 'edad' | 'nacionalidad' | 'correo' | 'clave'>) => Promise<void>;

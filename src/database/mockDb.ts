@@ -1,4 +1,4 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage'; // guarda información en el almacenamiento local del dispositivo, como si fuera una "caja fuerte" para guardar datos importantes de la usuaria
 
 export type Usuaria = {
   id: string;
@@ -13,12 +13,13 @@ export type Usuaria = {
   sintomas: string[];
   onboardingCompleto: boolean;
 };
-
+// elige cuales son los datos para regitsrarse
 type DatosRegistro = Pick<Usuaria, 'nombre' | 'edad' | 'nacionalidad' | 'correo' | 'clave'>;
 
 const USERS_KEY = 'kuyen:users';
 const SESSION_KEY = 'kuyen:session';
 
+// promise es como un "vale" que dice "te voy a dar algo en el futuro", y async/await es como decir "espera a que me den el vale antes de seguir con lo demás"
 async function leerUsuarias(): Promise<Usuaria[]> {
   const raw = await AsyncStorage.getItem(USERS_KEY);
   return raw ? JSON.parse(raw) : [];

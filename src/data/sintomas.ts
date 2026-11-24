@@ -29,6 +29,7 @@ export const CATEGORIAS: CategoriaSintoma[] = [
       { id: 'dolor-hombro', nombre: 'Dolor en el hombro' },
       { id: 'sensibilidad-senos', nombre: 'Sensibilidad en los senos' },
       { id: 'dolor-incapacitante', nombre: 'Dolor que me impide hacer mi día' },
+      { id: 'dolor-frente', nombre: 'Dolor similar a migraña' },
     ],
   },
   {
