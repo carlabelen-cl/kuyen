@@ -31,5 +31,6 @@ const symptomSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-
+// Índice para optimizar la búsqueda de síntomas por categoría y estado.
+symptomSchema.index({ categoriaId: 1, activo: 1 });
 module.exports = mongoose.model('Symptom', symptomSchema);

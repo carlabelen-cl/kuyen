@@ -5,6 +5,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const perfilRoutes = require('./routes/perfilRoutes');
 const sintomasRoutes = require('./routes/sintomasRoutes');
+const dailyRecordRoutes = require('./routes/dailyRecordRoutes');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/perfil', perfilRoutes);
 app.use('/api/sintomas', sintomasRoutes);
+app.use('/api/registros', dailyRecordRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {
